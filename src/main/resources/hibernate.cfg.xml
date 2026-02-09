@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- Database connection -->
+		<property name="hibernate.connection.driver_class">
+			com.mysql.cj.jdbc.Driver
+		</property>
+
+		<property name="hibernate.connection.url">
+			jdbc:mysql://localhost:3306/education_crm
+		</property>
+
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root@123</property>
+
+		<!-- Hibernate settings -->
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.MySQL8Dialect
+		</property>
+
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+
+		<mapping class="com.crm.entity.Customer" />
+		<mapping class="com.crm.entity.Course" />
+		<mapping class="com.crm.entity.Trainer" />
+		<mapping class="com.crm.entity.Order" />
+		<mapping class="com.crm.entity.Payment" />
+		
+		
+	</session-factory>
+</hibernate-configuration>
